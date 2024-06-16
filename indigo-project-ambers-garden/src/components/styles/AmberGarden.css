@@ -1,0 +1,57 @@
+/* src/components/AmberGarden.css */
+#amber-garden {
+    padding: 2rem;
+    text-align: center;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.banner p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    width: 80%;
+}
+
+.donate-section, .hamper-section, .event-section {
+    margin: 2rem 0;
+}
+
+.btn-main {
+    background: #6A5ACD; /* Slate blue button */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-main:hover {
+    background: #483D8B;
+}

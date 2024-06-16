@@ -1,0 +1,26 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background: #1a1a1a;
+  color: #ccc;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #111;
+  color: #ccc;
+}
+
+.dark-mode .btn-main {
+  background: #555;
+}
+
+.dark-mode .btn-main:hover {
+  background: #333;
+}
