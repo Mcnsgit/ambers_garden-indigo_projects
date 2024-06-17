@@ -18,7 +18,6 @@ export default function VideoBackground() {
       ref={videoRef}
       className="background-video"
       autoPlay
-      preload=''
       loop
       muted
       onCanPlay={handleCanPlay}

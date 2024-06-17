@@ -9,23 +9,23 @@
 
 .banner {
     position: relative;
-    overflow: hidden;
+
     text-align: center;
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
+    
 }
 
 .banner-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(50%); /* Darken the image for overlay contrast */
     position: absolute;
     top: 0;
     left: 0;
+    filter: brightness(50%); /* Darken the image for overlay contrast */
 }
 
 .banner-content {
@@ -36,9 +36,10 @@
     background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
     border-radius: 10px;
     max-width: 800px;
+    z-index: 1; /* Ensure content is above the image */
 }
 
-.about-section, .hamper-section, .event-section {
+.about-section, .donate-section, .hamper-section, .event-section {
     margin: 2rem 0;
     padding: 2rem;
     border-radius: 10px;
@@ -62,7 +63,7 @@
     text-align: left;
 }
 
-.about-section:hover,  .hamper-section:hover, .event-section:hover {
+.about-section:hover, .donate-section:hover, .hamper-section:hover, .event-section:hover {
     transform: scale(1.02);
 }
 
@@ -83,21 +84,4 @@
 .btn-main:hover {
     background: #483D8B;
     transform: translateY(-3px);
-}
-/* DonateQRCode specific styles */
-.donate-qrcode {
-    text-align: center;
-    margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 10px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.qr-code {
-    width: 200px;
-    margin: 1rem 0;
-    border-radius: 10px;
-    border: 2px solid #6A5ACD;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

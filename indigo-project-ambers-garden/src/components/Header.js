@@ -1,5 +1,6 @@
 // src/components/Header.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo2.png';
 import './styles/Header.css';
 
@@ -10,12 +11,13 @@ const Header = () => (
         <img src={logo} alt="Amber's Garden Logo" />
       </div>
       <ul>
-        <li><a href="/">Home</a></li> {/* Changed Link to a standard anchor tag */}
-        <li><a href="/#intro">PTSD Awareness </a></li> {/* Changed Link to a standard anchor tag */}
-        <li><a href="/amber-garden">Amber's Garden</a></li> {/* Changed Link to a standard anchor tag */}
-        <li><a href="/#donate">Donate</a></li> {/* Changed Link to a standard anchor tag */}
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/intro">PTSD Awareness</Link></li>
+        <li><Link to="/amber-garden">Amber's Garden</Link></li>
+        <li><Link to="/donate">Donate</Link></li>
       </ul>
     </nav>
   </header>
 );
+
 export default Header;

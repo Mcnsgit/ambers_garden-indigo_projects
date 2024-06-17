@@ -6,7 +6,7 @@
 
 .banner {
     position: relative;
-    overflow: hidden;
+
     text-align: center;
     height: 50vh;
 }
@@ -44,9 +44,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-p {
-    color: #555;
-}
+
 
 .btn-main {
     background: #6A5ACD; /* Slate blue button */
