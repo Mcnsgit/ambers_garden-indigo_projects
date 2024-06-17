@@ -7,7 +7,8 @@ import Home from './components/Home.js';
 import AmberGarden from './components/AmberGarden';
 import Footer from './components/Footer';
 import DarkModeToggle from './components/DarkModeToggle';
-
+// import CTA from './components/CTA';
+import ErrorBoundary from './ErrorBoundary.js';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -16,6 +17,8 @@ function App() {
   }, [darkMode]);
 
   return (
+    <ErrorBoundary>
+
     <Router>
       <div className="App">
         <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -27,6 +30,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ErrorBoundary>
   );
 }
 
