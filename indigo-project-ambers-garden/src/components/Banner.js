@@ -1,16 +1,18 @@
 // src/components/Banner.js
 import React from 'react';
 import './styles/Banner.css';
-// import backgroundVideo from '../assets/background-video.mp4';
+import VideoBackground from './VideoBackGRound';
 
 const Banner = () => (
   <div className="banner">
-    <video autoPlay muted loop className="background-video">
-      {/* <source src={backgroundVideo} type="video/mp4" /> */}
-    </video>
+    <div className='background-video'>
+    <VideoBackground  autoPlay loop muted playsInline/>
+    </div>
+    <div className='overlay'>
     <h1>June is PTSD Awareness Month</h1>
     <p>Join us in raising awareness and supporting those affected by PTSD.</p>
     <a href="#donate" className="btn-main">Donate Now</a>
+    </div>
   </div>
 );
 

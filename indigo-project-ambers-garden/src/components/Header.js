@@ -1,25 +1,21 @@
 // src/components/Header.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import logo from '../assets/logo2.png';
 import './styles/Header.css';
-// import logo from '../assets/logo.jpg';
 
 const Header = () => (
   <header>
     <nav>
       <div className="logo">
-        <h1>
-        Indigo Projects Logo
-        </h1>
+        <img src={logo} alt="Amber's Garden Logo" />
       </div>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/#intro">About PTSD</Link></li>
-        <li><Link to="/#donate">Donate</Link></li>
-        <li><Link to="/amber-garden">Amber's Garden</Link></li>
+        <li><a href="/">Home</a></li> {/* Changed Link to a standard anchor tag */}
+        <li><a href="/#intro">PTSD Awareness </a></li> {/* Changed Link to a standard anchor tag */}
+        <li><a href="/amber-garden">Amber's Garden</a></li> {/* Changed Link to a standard anchor tag */}
+        <li><a href="/#donate">Donate</a></li> {/* Changed Link to a standard anchor tag */}
       </ul>
     </nav>
   </header>
-
 );
 export default Header;

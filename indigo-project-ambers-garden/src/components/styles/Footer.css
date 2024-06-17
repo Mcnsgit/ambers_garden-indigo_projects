@@ -13,6 +13,11 @@ footer {
     gap: 1rem;
     padding: 0;
 }
+.p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
 
 .social-media li a {
     color: #fff;
