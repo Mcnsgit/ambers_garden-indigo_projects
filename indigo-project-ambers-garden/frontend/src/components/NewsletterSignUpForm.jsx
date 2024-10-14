@@ -67,7 +67,9 @@ const NewsletterSignup = () => {
 
   return (
     <div className="newsletter-signup-container">
-      <Typography className='newsletter-signup-heading' variant="h6">Subscribe to our Newsletter</Typography>
+      <Typography className='newsletter-signup-heading' variant="h6">
+        Subscribe to our Newsletter
+      </Typography>
       <form onSubmit={handleSubmit}>
         <Grid2 container spacing={2}>
           <Grid2 item xs={12} sm={6}>
@@ -108,7 +110,7 @@ const NewsletterSignup = () => {
             />
           </Grid2>
           <Grid2 item xs={12}>
-            <FormControlLabel className='newsletter-signup-consent'
+            <FormControlLabel
               control={
                 <Checkbox
                   name="consent"
@@ -120,6 +122,7 @@ const NewsletterSignup = () => {
                 />
               }
               label="I agree to receive communications from Indigo Projects. You can unsubscribe at any time."
+              className='newsletter-signup-consent'
             />
             {errors.consent && (
               <Typography variant="body2" color="error">
@@ -134,6 +137,7 @@ const NewsletterSignup = () => {
               color="primary"
               disabled={loading}
               fullWidth
+              className='newsletter-signup-button'
             >
               {loading ? <CircularProgress size={24} /> : 'Subscribe'}
             </Button>

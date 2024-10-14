@@ -28,7 +28,7 @@ const DonationForm = () => {
   };
 
   return (
-    <Card  className='donation-form-container'>
+    <Card className='donation-form-container'>
       <CardContent className='donation-form'>
         <Typography variant="h5" gutterBottom align="center">
           Make a Donation
@@ -36,7 +36,6 @@ const DonationForm = () => {
         {!showPayPal ? (
           <>
             <TextField
-            className='donation-form-input'
               type="number"
               label="Donation Amount"
               value={amount}
@@ -47,7 +46,7 @@ const DonationForm = () => {
               fullWidth
               error={!!amountError}
               helperText={amountError}
-              sx={{ mb: 2 }}
+              className='donation-form-input'
             />
             <PayPalButton amount={amount} />
             <Button
@@ -56,13 +55,13 @@ const DonationForm = () => {
               variant="contained"
               onClick={handleDonateClick}
               disabled={!!amountError}
-              sx={{ backgroundColor: '#FFD700', color: '#4B0082' }}
+              className='donation-form-button'
             >
               Donate
             </Button>
           </>
         ) : (
-          <div style={{ textAlign: 'center' }}>
+          <div className="paypal-button-container">
             <PayPalButton amount={amount} />
           </div>
         )}

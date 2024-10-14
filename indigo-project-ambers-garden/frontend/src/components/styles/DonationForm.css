@@ -1,6 +1,5 @@
-/* DonationForm.css */
-.donation-form {
-    background-color: #ffffff; /* White background */
+.donation-form-container {
+    background-color: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -11,15 +10,15 @@
   .donation-form input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #808080; /* Grey border */
+    border: 1px solid #808080;
     border-radius: 8px;
     margin-bottom: 15px;
   }
   
   .donation-form button {
     width: 100%;
-    background-color: #FFD700; /* Gold for CTA button */
-    color: #4B0082; /* Indigo text */
+    background-color: #FFD700;
+    color: #4B0082;
     font-weight: bold;
     border-radius: 8px;
     padding: 12px;
@@ -28,5 +27,5 @@
   
   .donation-form button:hover {
     background: linear-gradient(135deg, #FFD700 0%, #4B0082 100%);
-    color: #ffffff; /* White text on hover */
-  }
+    color: #fff;
+  } 

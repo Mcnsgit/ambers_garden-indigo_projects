@@ -9,63 +9,58 @@
     font-family: 'Roboto', sans-serif;
   }
 
-  .Container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 12px;
-  background-color: #fff; /* White background for form sections */
-}
-
-.main-section {
-  text-align: center;
-  max-width: 100%;
-  margin-bottom: 40px;
-  padding: 20px;
-}
-
-.main-section h3 {
-  color: #4B0082; /* Indigo for headings */
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.main-section h5 {
-  color: #800080; /* Vibrant Purple for subheading */
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-/* Improving grid and layout spacing */
-.form-container {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-}
-
-footer {
-  background-color: #4B0082; /* Indigo background for footer */
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-footer a {
-  color: #FFD700; /* Gold color for links */
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin:15px auto;
+    padding: 30px ;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .main-section h3 {
+    color: #4B0082; /* Indigo */
+    font-weight: bold;
+    font-size: 2.5rem; /* Adjusted font size */
+    margin-bottom: 20px;
+  }
+  
+  .main-section h5 {
+    color: #800080; /* Vibrant Purple */
+    font-size: 1.6rem; /* Slightly reduced */
+    margin-bottom: 20px;
+  }
+  
+  .Grid2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Better spacing */
+  }
+  
+  footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer a {
+    color: #FFD700;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
