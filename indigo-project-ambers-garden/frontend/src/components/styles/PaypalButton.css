@@ -1,0 +1,24 @@
+/* Form Section Styling */
+.form-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+  }
+  
+  button {
+    background: #FFD700; /* Gold for CTA button */
+    color: #4B0082; /* Indigo text */
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #FFD700 0%, #4B0082 100%);
+    color: white;
+  }
+  

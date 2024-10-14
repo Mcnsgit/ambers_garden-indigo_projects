@@ -1,0 +1,209 @@
+/* Global Styles */
+:root {
+  font-family: 'Roboto', sans-serif;
+  color-scheme: light dark;
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --indigo: #4B0082;
+  --purple: #800080;
+  --gold: #FFD700;
+  --grey: #808080;
+  /** Primary Colors */
+--color-primary-a0: #4b0082;  /* Main Indigo */
+--color-primary-a10: #40076b;
+--color-primary-a20: #350b56;
+--color-primary-a30: #2a0d41;
+--color-primary-a40: #1f0c2d;
+--color-primary-a50: #15061a;
+
+/** Accent Colors (Sky Blue) */
+--color-accent-a0: #87ceeb;
+--color-accent-a10: #7db7d099;
+--color-accent-a20: #598496;
+--color-accent-a30: #44626e;
+--color-accent-a40: #2f4149;
+--color-accent-a50: #1b2327;
+
+/** Success Colors (Green) */
+--color-success-a0: #009f42;
+--color-success-a10: #167533;
+--color-success-a20: #184d25;
+--color-success-a30: #132916;
+
+/** Warning Colors (Gold) */
+--color-warning-a0: #f0ad4e;
+--color-warning-a10: #af7f3c;
+--color-warning-a20: #71532a;
+--color-warning-a30: #392b19;
+
+/** Info Colors (Purple) */
+--color-info-a0: #388cfa;
+--color-info-a10: #3267b5;
+--color-info-a20: #284475;
+--color-info-a30: #1a253b;
+
+/** Danger Colors (Red) */
+--color-danger-a0: #b41c2b;
+--color-danger-a10: #851d22;
+--color-danger-a20: #581919;
+--color-danger-a30: #2f1310;
+
+/** Neutral Colors */
+--color-neutral-a0: #ffffff;  /* White */
+--color-neutral-a10: #c6c6c6;
+--color-neutral-a20: #919191;
+--color-neutral-a30: #5e5e5e;
+--color-neutral-a40: #303030;
+--color-neutral-a50: #000000;  /* Black */
+}
+body.dark-mode {
+  background-color: var(--color-neutral-a50); /* Black background */
+  color: var(--color-neutral-a0);
+}
+
+body.dark-mode .header,
+body.dark-mode .footer {
+  background-color: var(--color-primary-a30); /* Darker Indigo */
+}
+
+body.dark-mode .donation-section,
+body.dark-mode .newsletter-section {
+  background-color: var(--color-neutral-a40); /* Darker background */
+  color: var(--color-neutral-a0);
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;   
+
+}
+
+/* Text styling for main sections */
+h1, h3, h5 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  color: var(--indigo);
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h5 {
+  color: var(--purple);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--gold);
+  color: var(--indigo);
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--indigo) 100%);
+  color: #fff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;   
+
+  }
+}
+
+/* Grid Layout for responsive design */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-item {
+  flex: 1;
+  min-width: 300px; /* Minimum size for mobile screens */
+  margin: 10px;
+}
+
+@media (max-width: 1024px) {
+  .main-section h3 {
+    font-size: 2.2rem;
+  }
+  .main-section h5 {
+    font-size: 1.3rem;
+  }
+  .donation-section, .newsletter-section {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section h3 {
+    font-size: 2.2rem;
+  }
+  
+  .main-section h5 {
+    font-size: 1.3rem;
+  }
+  
+  .donation-form, .newsletter-signup-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .main-section h5 {
+    font-size: 1rem;
+  }
+  
+  .donation-form, .newsletter-signup-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+  }
+}

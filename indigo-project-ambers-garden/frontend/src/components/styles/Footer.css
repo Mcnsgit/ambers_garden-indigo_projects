@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-a10); /* Darker Indigo */
+    color: var(--color-neutral-a0); /* White */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 10px 0;
+    color: var(--color-neutral-a10); /* Lighter grey for text */
+  }
+  
+  .footer a {
+    color: var(--color-warning-a0); /* Gold links */
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: var(--color-warning-a10); /* Darker Gold on hover */
+  }
+  
+  .footer .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }

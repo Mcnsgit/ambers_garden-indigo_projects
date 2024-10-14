@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--color-primary-a0); /* Indigo background */
+    color: var(--color-neutral-a0); /* White text */
+  }
+  
+  .header .logo {
+    height: 60px;
+  }
+  
+  .header .dark-mode-toggle {
+    background-color: var(--color-accent-a10); /* Sky Blue accent */
+    border: none;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header .dark-mode-toggle:hover {
+    background-color: var(--color-accent-a20); /* Darker Sky Blue */
+  }

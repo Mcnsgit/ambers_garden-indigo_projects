@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ambers_garden-indigo_projects/static/css/main.51a4fd04.css",
+    "main.js": "/ambers_garden-indigo_projects/static/js/main.1ff31ddc.js",
+    "static/js/453.9d9c46fc.chunk.js": "/ambers_garden-indigo_projects/static/js/453.9d9c46fc.chunk.js",
+    "static/media/background-video.mp4": "/ambers_garden-indigo_projects/static/media/background-video.c5ba70b2e8707f21c2f5.mp4",
+    "static/media/events.jpeg": "/ambers_garden-indigo_projects/static/media/events.6b34e9227dde9b446744.jpeg",
+    "static/media/amber.jpg": "/ambers_garden-indigo_projects/static/media/amber.d56fdffb87c1028b6198.jpg",
+    "static/media/hamper.jpeg": "/ambers_garden-indigo_projects/static/media/hamper.3870656944ffa2aad44c.jpeg",
+    "static/media/about-amber.jpeg": "/ambers_garden-indigo_projects/static/media/about-amber.9401f67396dcfc5caa57.jpeg",
+    "static/media/qrPaypalDonate.jpeg": "/ambers_garden-indigo_projects/static/media/qrPaypalDonate.46cbbc424bfd458df90a.jpeg",
+    "static/media/logo2.png": "/ambers_garden-indigo_projects/static/media/logo2.2f4a100385b8feb79777.png",
+    "index.html": "/ambers_garden-indigo_projects/index.html",
+    "main.51a4fd04.css.map": "/ambers_garden-indigo_projects/static/css/main.51a4fd04.css.map",
+    "main.1ff31ddc.js.map": "/ambers_garden-indigo_projects/static/js/main.1ff31ddc.js.map",
+    "453.9d9c46fc.chunk.js.map": "/ambers_garden-indigo_projects/static/js/453.9d9c46fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51a4fd04.css",
+    "static/js/main.1ff31ddc.js"
+  ]
+}

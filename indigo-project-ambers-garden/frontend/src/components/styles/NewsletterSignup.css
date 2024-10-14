@@ -1,0 +1,39 @@
+.newsletter-signup-container {
+  background-color: var(--color-neutral-a0);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-signup-heading {
+  font-size: 1.8rem;
+  color: var(--color-primary-a0);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.newsletter-signup-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-neutral-a30);
+  margin-bottom: 15px;
+}
+
+.newsletter-signup-button {
+  background-color: var(--color-warning-a0);
+  color: var(--color-primary-a0);
+  font-weight: bold;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.newsletter-signup-consent ,  .newsletter-signup-checkbox{
+  font-size: 0.1rem;
+  color: var(--color-neutral-a30);
+  margin-top: 10px;
+}

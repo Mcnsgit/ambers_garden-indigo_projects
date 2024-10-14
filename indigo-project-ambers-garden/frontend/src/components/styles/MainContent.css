@@ -1,0 +1,10 @@
+/* src/components/styles/MainContent.css */
+.main-content {
+    padding: 40px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .main-content h1 {
+    color: var(--primary-color);
+  }
