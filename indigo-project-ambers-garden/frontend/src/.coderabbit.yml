@@ -1,0 +1,22 @@
+reviews:
+  path_instructions:
+    - path: "backend/**/*.js"
+      instructions: |
+        Review the JavaScript code in the backend directory against the Google JavaScript style guide and point out any mismatches.
+    - path: "frontend/**/*.jsx"
+      instructions: |
+        Ensure that the frontend JavaScript follows best practices for React components and adheres to ESLint rules.
+    - path: "public/**/*.css"
+      instructions: |
+        Review the CSS files for adherence to BEM naming conventions and ensure consistency with the style guide.
+  tools:
+    ast-grep:
+      essential_rules: true
+      rule_dirs:
+        - "rules"
+  labeling:
+    path_based:
+      - path: "backend/**/*.js"
+        label: "backend"
+      - path: "frontend/**/*.jsx"
+        label: "frontend"

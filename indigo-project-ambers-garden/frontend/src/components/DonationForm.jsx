@@ -1,8 +1,8 @@
 // src/components/DonationForm.jsx
 import React, { useState } from 'react';
-import {Card,CardContent,  Typography,  TextField,  InputAdornment,  Button,  CircularProgress,} from '@mui/material';
+import {Card,CardContent,  Typography,  TextField,  InputAdornment,  Button} from '@mui/material';
 import PayPalButton from './PayPalButton';
-import './styles/DonationForm.css';
+// import './styles/DonationForm.css';
 const DonationForm = () => {
   const [amount, setAmount] = useState('10.00');
   const [showPayPal, setShowPayPal] = useState(false);
@@ -28,46 +28,43 @@ const DonationForm = () => {
   };
 
   return (
-    <Card className='donation-form-container'>
-      <CardContent className='donation-form'>
-        <Typography variant="h5" gutterBottom align="center">
-          Make a Donation
-        </Typography>
-        {!showPayPal ? (
-          <>
-            <TextField
-              type="number"
-              label="Donation Amount"
-              value={amount}
-              onChange={handleChange}
-              InputProps={{
-                startAdornment: <InputAdornment position="start">£</InputAdornment>,
-              }}
-              fullWidth
-              error={!!amountError}
-              helperText={amountError}
-              className='donation-form-input'
-            />
-            <PayPalButton amount={amount} />
-            <Button
-              color="primary"
-              fullWidth
-              variant="contained"
-              onClick={handleDonateClick}
-              disabled={!!amountError}
-              className='donation-form-button'
-            >
-              Donate
-            </Button>
-          </>
-        ) : (
-          <div className="paypal-button-container">
-            <PayPalButton amount={amount} />
-          </div>
-        )}
-      </CardContent>
-    </Card>
-  );
+    <Card sx={{ maxWidth: 400, margin: '20px auto', padding: 3 }}>
+    <CardContent>
+      <Typography variant="h5" gutterBottom align="center">
+        Make a Donation
+      </Typography>
+      {!showPayPal ? (
+        <>
+          <TextField
+            type="number"
+            label="Donation Amount"
+            value={amount}
+            onChange={handleChange}
+            InputProps={{
+              startAdornment: <InputAdornment position="start">£</InputAdornment>,
+            }}
+            fullWidth
+            error={!!amountError}
+            helperText={amountError}
+          />
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleDonateClick}
+            disabled={!!amountError}
+            sx={{ fontWeight: 'bold', marginTop: 2 }}
+          >
+            Donate
+          </Button>
+        </>
+      ) : (
+        <div className="paypal-button-container">
+          <PayPalButton amount={amount} />
+        </div>
+      )}
+    </CardContent>
+  </Card>
+);
 };
 
 export default DonationForm;

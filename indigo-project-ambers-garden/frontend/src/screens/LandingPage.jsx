@@ -2,45 +2,66 @@ import React from 'react';
 import Header from '../components/Header';
 import DonationForm from '../components/DonationForm';
 import NewsletterSignup from '../components/NewsletterSignUpForm';
-import './styles/LandingPage.css';
-import { Container, Grid2, Typography } from '@mui/material';
+// import './styles/LandingPage.css';
+import { Container, Grid2, Typography, Box, styled } from '@mui/material';
 import Footer from '../components/Footer';
 
 
-const LandingPage = () => (
+const LandingPage = ({darkMode, setDarkMode}) => (
   <div className="landing-page">
     {/* Header */}
-    <Header />
+    <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
+    <Container
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        maxWidth: '1200px',
+        margin: '15px auto',
+        padding: '30px',
+        backgroundColor: 'background.paper',
+        borderRadius: 2,
+        boxShadow: 3,
+      }}
+    >
+       <Typography variant="h3" align="center" gutterBottom>
+        We don’t fight alone...
+      </Typography>
+      <Typography variant="h5" align="center" gutterBottom sx={{ marginBottom: '20px' }}>
+        A Tribe for Shared Experience Trauma Warriors
+      </Typography>
+      <Box sx={({ flexGrow: 1 })}>
 
-    {/* Main Section */}
-    <div className="Container">
-      <div className="main-section">
-        <Typography variant="h3" align="center" gutterBottom sx={{ color: '#4B0082', fontWeight: 'bold' }}>
-          We don’t fight alone...
-        </Typography>
-        <Typography variant="h5" align="center" gutterBottom sx={{ color: '#800080', marginBottom: '20px' }}>
-          A Tribe for Shared experience Trauma Warriors
-        </Typography>
-      </div>
+      <Grid2 className="grid-container" container spacing={2} justifyContent="center">
 
-      {/* Donation Form Section */}
-      <Grid2 container spacing={2} justifyContent="center" alignItems="center">
-        <Grid2 item xs={12} sm={6}>
-          <DonationForm amount={10.00} />
-        </Grid2>
+          <GridItem>
 
-        {/* Newsletter Signup Section */}
-        <Grid2 item xs={12} sm={6} >
+          <DonationForm />
+          </GridItem>
+
+
+          <GridItem>
+
           <NewsletterSignup />
-        </Grid2>
-      </Grid2>
-    </div>
+          </GridItem>
 
-    {/* Footer */}
-    <div className="footer">
+      </Grid2>
+      </Box>
+    </Container>
     <Footer />
-    </div>
   </div>
 );
 
 export default LandingPage;
+
+const GridItem = styled (Grid2)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '20px',
+  backgroundColor: 'background.gridItem',
+  color: 'text.primary',
+  borderRadius: 2,
+  boxShadow: 3,
+});

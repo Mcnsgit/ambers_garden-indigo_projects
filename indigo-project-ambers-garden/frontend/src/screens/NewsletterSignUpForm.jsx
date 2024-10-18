@@ -22,8 +22,20 @@ const NewsletterSignup = () => {
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
+  const [error, setErrors] = useState('');
   const [consent, setConsent] = useState(false);
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.firstName) newErrors.firstName = 'First name is required';
+    if (!formData.email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email address is invalid';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,19 +47,17 @@ const NewsletterSignup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setMessage('');
-    setError('');
-
+    if (!validate()) return;
+  
+    setLoading(true);
+  
     try {
-      const response = await axios.post('http://localhost:5000/subscribe', {
-        ...formData,
-        consent,
-      });
-      setMessage('Thank you for subscribing!');
-      setFormData({ firstName: '', lastName: '', email: '' });
+      const response = await axios.post('http://localhost:3001/subscribe', formData);
+      setMessage(response.data.message);
+      setFormData({ firstName: '', lastName: '', email: '', consent: false });
     } catch (err) {
-      setError(err.response?.data?.error || 'An error occurred. Please try again.');
+      setErrors({ form: err.response?.data?.error || 'An error occurred. Please try again.' });
     } finally {
       setLoading(false);
     }

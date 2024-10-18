@@ -1,29 +1,36 @@
-// src/components/Footer.js
+// src/components/Footer.jsx
 import React from 'react';
-import './styles/Footer.css';
-import { SocialIcon } from 'react-social-icons/component';
-import 'react-social-icons/x'
+import { Box, Typography, Link } from '@mui/material';
+import { SocialIcon } from 'react-social-icons';
 // Footer.jsx
 const Footer = () => {
-const twitterIcon = <SocialIcon url='https://twitter.com/teamindigo' target="_blank" rel="noopener noreferrer" />
-
-return (
-  <footer>
-    <div className="footer">
-
-    <p>&copy; {new Date().getFullYear()} Indigo Projects</p>
-
-    <p>Contact us: hello@teamindigo.uk</p>
-    <div className="social-media">
-    <p>Follow us on social media:</p>
-    <ul className="social-media">
-<SocialIcon url='https://x.com' target="_blank" rel="noopener noreferrer" />
-    </ul>
-    </div>
-    </div>
-  </footer>
-);
+  return (
+    <Box
+      component="footer"
+      sx={{
+        backgroundColor: 'primary.dark',
+        color: 'background.paper',
+        padding: '20px 0',
+        textAlign: 'center',
+      }}
+    >
+      <Typography variant="body1" sx={{ marginBottom: 1 }}>
+        &copy; {new Date().getFullYear()} Indigo Projects
+      </Typography>
+      <Typography variant="body1" sx={{ marginBottom: 1 }}>
+        Contact us:{' '}
+        <Link href="mailto:hello@teamindigo.uk" color="warning.main">
+          hello@teamindigo.uk
+        </Link>
+      </Typography>
+      <Box sx={{ marginTop: 2 }}>
+        <Typography variant="body1">Follow us on social media:</Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, marginTop: 1 }}>
+          <SocialIcon url="https://x.com/teamindigo" style={{ height: 35, width: 35 }} />
+        </Box>
+      </Box>
+    </Box>
+  );
 };
 
 export default Footer;
-

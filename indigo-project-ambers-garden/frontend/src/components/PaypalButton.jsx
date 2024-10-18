@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
-import './styles/PaypalButton.css';
+// import './styles/PaypalButton.css';
 import axios from 'axios';
 
 
@@ -15,53 +15,38 @@ const PayPalButton = ({ amount }) => {
 
   // const [{isPending }] = usePayPalScriptReducer();
 
-  function createOrder() {
-    return axios.post('http://localhost:3001/create-order', {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        id: {amount},
-        amount: amount.toString(),
-        currency: 'GBP',
-        description: 'Donation',
-        intent: 'capture',
-      })
-    })
-  }
-
-
-  const redirectToThankYouPage = () => {
-    window.location.href = '/thank-you';
+  const createOrder = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/create-order', { amount });
+      return response.data.id;
+    } catch (error) {
+      console.error('Error creating order:', error);
+    }
   };
 
-  async function onApprove(data) {
-    const response = await axios.post('http://localhost:3001/execute-payment', {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+  const onApprove = async (data) => {
+    try {
+      const response = await axios.post('http://localhost:3001/capture-order', {
         orderID: data.orderID,
-      })
-    });
-    const orderData = response.json();
-    const name = orderData.payer.name.given_name;
-    console.log(`Thank you for your donation, ${name}!`);
-    redirectToThankYouPage();
-  }
-
-
+      });
+      const orderData = response.data;
+      const name = orderData.payer.name.given_name;
+      console.log(`Thank you for your donation, ${name}!`);
+      window.location.href = '/thank-you';
+    } catch (error) {
+      console.error('Error capturing order:', error);
+    }
+  };
 
   return (
     <PayPalScriptProvider options={initialOptions}>
-    <PayPalButtons
-                createOrder={createOrder}
-                onApprove={onApprove}
-            />
+      <PayPalButtons
+        style={{ layout: 'vertical', color: 'gold', shape: 'rect', label: 'donate' }}
+        createOrder={createOrder}
+        onApprove={onApprove}
+      />
     </PayPalScriptProvider>
   );
-}
-
+};
 
 export default PayPalButton;
-// {isPending ? <div className="spinner" /> : null} 
