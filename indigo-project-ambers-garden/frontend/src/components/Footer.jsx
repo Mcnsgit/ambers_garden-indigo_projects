@@ -19,8 +19,8 @@ const Footer = () => {
       </Typography>
       <Typography variant="body1" sx={{ marginBottom: 1 }}>
         Contact us:{' '}
-        <Link href="mailto:hello@teamindigo.uk" color="warning.main">
-          hello@teamindigo.uk
+        <Link href="mailto:hello@teamindigo.co.uk" color="warning.main">
+          hello@teamindigo.co.uk
         </Link>
       </Typography>
       <Box sx={{ marginTop: 2 }}>
